@@ -1,0 +1,79 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  
+  <servlet>
+  	<servlet-name>saveNoteServlet</servlet-name>
+  	<servlet-class>com.servlets.SaveNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserRegisterServlet</servlet-name>
+  	<display-name>UserRegisterServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.UserRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<display-name>UserLoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveEditedNoteServlet</servlet-name>
+  	<display-name>SaveEditedNoteServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.SaveEditedNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteServlet</servlet-name>
+  	<display-name>DeleteServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ArchiveNoteServlet</servlet-name>
+  	<display-name>ArchiveNoteServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.ArchiveNoteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchNoteServlet</servlet-name>
+  	<display-name>SearchNoteServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.servlets.SearchNoteServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>saveNoteServlet</servlet-name>
+  	<url-pattern>/saveNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserRegisterServlet</servlet-name>
+  	<url-pattern>/userRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<url-pattern>/userLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveEditedNoteServlet</servlet-name>
+  	<url-pattern>/saveEditedNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteServlet</servlet-name>
+  	<url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ArchiveNoteServlet</servlet-name>
+  	<url-pattern>/ArchiveNoteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SearchNoteServlet</servlet-name>
+  	<url-pattern>/SearchNoteServlet</url-pattern>
+  </servlet-mapping>
+
+  	
+  
+</web-app>

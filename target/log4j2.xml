@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<Properties>
+		<Property name="logPath">./logs</Property>
+		<Property name="rollingFileName">NOTE_LOGS_l4j2</Property>
+		<Property name="PatternLayout">%d{yyy/MM/dd HH:mm:ss.SSS} [%x] [%t] %-5p %C{1}:%-5L %m%n</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="AppFileAppender"
+					fileName="${logPath}/${rollingFileName}.log"
+					filePattern="${logPath}/${rollingFileName}.log.%d{yyyy-MM-dd-HH}.log.zip"
+					ignoreExceptions="false">
+			<PatternLayout pattern="${PatternLayout}"/>
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10MB" />
+			</Policies>
+		</RollingFile>
+		
+		<File name="FileAppender" fileName="${logPath}/${rollingFileName}-${date:yyyyMMdd}.log" immediateFlush="false" append="true">
+            <PatternLayout pattern="${PatternLayout}"/>
+        </File>
+        
+		<Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${PatternLayout}"/>
+        </Console>
+	</Appenders>
+	
+	<Loggers>
+		<Logger name="log" level="all" />
+		<Root level="DEBUG">
+			<AppenderRef ref="AppFileAppender" level="INFO" />
+			<AppenderRef ref="console" level="INFO" />
+			<AppenderRef ref="FileAppender" level="INFO" />
+		</Root>
+	</Loggers>
+	
+	
+	
+</configuration>
